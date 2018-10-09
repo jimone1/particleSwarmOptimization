@@ -13,29 +13,6 @@
     2. meomrize
     3. society
 '''
-'''
-vmax 
-    class particle:
-        def__int__(self, dimension, boundary(this is a list of list )):
-            self.v  (ls) (||create vector class)
-            self.x  (ls) (||create vector class)
-            self.pBest  (ls) (||create vector class)
-            self.dimension (int)
-        def move(self):    
-
-        def evaluate(self, function):
-
-
-        def f(x):                           
-            return 2 - x[0]**2
-        // def f(a,b); return a + b;
-        // def test(fun): return fun (1,2)
-        // print test(f(1,2))
-
-    if self += v not in boundary, stop them
-    outside of class
-    def pso(function, boundary, iteration)  //final function
-'''
 import random
 
 class Particle:
@@ -93,7 +70,6 @@ def pso(func, boundary):
             vect.append(random.uniform(boundary[vec][0], boundary[vec][1]))
             particles.append(Particle(vect, boundary))
 
-
     gBestVec = particles[0].pBest
 
     for i in range(numIterations):  #number of time i want to test
@@ -113,7 +89,6 @@ def pso(func, boundary):
             return f(gBestVec)
     return f(gBestVec)
 
-
 def f(x):
-    return 2 - x[0]**1 + x[1]**2 + x[2]**1
-print(pso(f, [[0, 2],[0,3], [1,2]]))
+    return 2 - x[0]**(2)
+print(pso(f, [[0, 2]]))
